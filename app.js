@@ -39,14 +39,19 @@ const init =  async () =>{
 // run TIGER loop 
 const tigerGameLoop = async () => {
     try {
-        if(myPet.life <=0){
+        if(myPet.life <=0 || myPet.hunger <=0){
             console.log("GAME OVER")
             return
-        } 
+        }
+        
 myPet.time()
     let response = await inquirer.prompt(tigerQuestions)
     // console.log(response)
-// TIGER ACTIONS 
+// TIGER ACTIONS//
+// if(myPet.thirst <=0){
+//     myPet.thirst = 0;
+//     tigerGameLoop()
+//   } 
     if (response.action === "drink"){
         myPet.drink()
     }else if (response.action === "feed"){
@@ -82,6 +87,7 @@ const elephantGameLoop = async () => {
             console.log("GAME OVER")
             return
         }
+        
 myPet.time()
     let response = await inquirer.prompt(elephantQuestions)
     // console.log(response)

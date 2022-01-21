@@ -1,17 +1,18 @@
 class pet {
 constructor(name){
 this.name = name
-this.life = 103 // 100 full life 0 dead
-this.thirst = 53 // 100 full 0 empty
-this.hunger = 53 // 100 full 0 empty
-this.energy = 53 //100 full 0 empty
+this.life = 100 // 100 full life 0 dead
+this.thirst = 10// 100 full 0 empty
+this.hunger = 100 // 100 full 0 empty
+this.energy = 100 //100 full 0 empty
 this.hygiene = 53 //100 ok 0 dirty
 this.toilet = 53 //100 ok 0 needs toilet
 
 }
+
 drink(){
-  this.life += 3
-  this.thirst += 5
+  this.life += 5
+  this.thirst -= 5
   this.hunger -= 5
   this.energy += 5
   this.toilet -= 5
